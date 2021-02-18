@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+<! Hudgens, J (2018) Portfolio Site Codebase index [Source code]. https://github.com/jordanhudgens/portfolio-html-site/blob/master/index.html--> 
+	<head>
+		<meta charset="utf-8">
+		<title>Portfolio Homepage</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="nav-wrapper">
+				<div class="left-side">
+					<div class="nav-link-wrapper">
+						<a href="index.html">Home</a>
+					</div>
+					<div class="nav-link-wrapper">
+						<a href="about.html">About</a>
+					</div>
+				</div>
+				<div class="right-side">
+					<div class="brand">
+						<div>JAMILA TOMINES</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-wrapper">
+				<div class="portfolio-items-wrapper">
+					<div class="portfolio-item-wrapper">
+						<div class="portfolio-img-background" style="background-image:url(images/portfolio1.jpg)"></div>
+						<div class="img-text-wrapper">
+							<div class="logo-wrapper">
+								<img src="images/logos/muse.png" alt="">
+							</div>
+
+							<div class="subtitle">
+								For the Krigolson Lab at the University of Victoria, I gathered EEG data using Muse mobile EEG technology with MATLAB.
+							</div>
+						</div>
+					</div>
+				
+				
+					<div class="portfolio-item-wrapper">
+						<div class="portfolio-img-background" style="background-image:url(images/portfolio2.jpg)"></div>
+						<div class="img-text-wrapper">
+							<div class="logo-wrapper">
+								<img src="images/logos/islandhealth.png" alt="">
+							</div>
+
+							<div class="subtitle">
+								For Island Health, I was a Full Stack Developer and Business Analyst for the Department of Finance. I developed a site and created reports. 
+							</div>
+						</div>
+					</div>
+				
+				
+					<div class="portfolio-item-wrapper">
+						<div class="portfolio-img-background" style="background-image:url(images/portfolio3.jpg)"></div>
+						<div class="img-text-wrapper">
+							<div class="logo-wrapper">
+								<img src="images/logos/academic.png" alt="">
+							</div>
+
+							<div class="subtitle">
+								Inspired by the technical knowledge I learned as a fourth year Computer Science Student, I built and set up my own computer.
+							</div>
+						</div>
+					</div>
+				
+				
+					
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+	const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+	portfolioItems.forEach(portfolioItem => {
+		portfolioItem.addEventListener('mouseover', () => {
+			console.log(portfolioItem.childNodes[1].classList)
+			portfolioItem.childNodes[1].classList.add('image-blur');
+		});
+		
+		portfolioItem.addEventListener('mouseout', () => {
+			console.log(portfolioItem.childNodes[1].classList)
+			portfolioItem.childNodes[1].classList.remove('image-blur');
+		});
+	
+	</script>
+</html>
